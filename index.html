@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonne Année</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 95vh;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom:0;
+            border: 6px solid #ff0000;
+            animation: borderBlink 5s linear infinite alternate;
+        }
+
+        @keyframes borderBlink {
+            from {
+                border-color: #ff0000;
+            }
+            to {
+                border-color: #00ff00;
+            }
+        }
+
+        .bonne-annee {
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            animation: moveAndChangeColor 10s linear infinite;
+        }
+
+        @keyframes moveAndChangeColor {
+            0%, 100% {
+                top: 0;
+                left: 0;
+                color: #ff0000;
+            }
+            25% {
+                top: 50px;
+                left: 50px;
+                color: #00ff00;
+            }
+            50% {
+                top: 100px;
+                left: 100px;
+                color: #0000ff;
+            }
+            75% {
+                top: 50px;
+                left: 50px;
+                color: #ff00ff;
+            }
+        }
+         .bonneannee {
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            animation: oveAndChangeColor 10s linear infinite;
+        }
+
+        @keyframes oveAndChangeColor {
+            0%, 100% {
+                top: 0;
+                right: 0;
+                color: #ff0000;
+            }
+            25% {
+                top: 50px;
+                right: 50px;
+                color: #00ff00;
+            }
+            50% {
+                top: 100px;
+                right: 100px;
+                color: #0000ff;
+            }
+            75% {
+                top: 50px;
+                right: 50px;
+                color: #ff00ff;
+            }
+        }
+         .bonne {
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            animation: veAndChangeColor 10s linear infinite;
+        }
+
+        @keyframes veAndChangeColor {
+            0%, 100% {
+                bottom: 0;
+                left: 0;
+                color: #ff0000;
+            }
+            25% {
+                bottom: 50px;
+                left: 50px;
+                color: #00ff00;
+            }
+            50% {
+                bottom: 100px;
+                left: 100px;
+                color: #0000ff;
+            }
+            75% {
+                bottom: 50px;
+                left: 50px;
+                color: #ff00ff;
+            }
+        }
+        .bonn {
+            font-size: 14px;
+            font-weight: bold;
+            position: absolute;
+            animation: eAndChangeColor 10s linear infinite;
+        }
+
+        @keyframes eAndChangeColor {
+            0%, 100% {
+                bottom: 0;
+                right: 0;
+                color: #ff0000;
+            }
+            25% {
+                bottom: 50px;
+                right: 50px;
+                color: #00ff00;
+            }
+            50% {
+                bottom: 100px;
+                right: 100px;
+                color: #0000ff;
+            }
+            75% {
+                bottom: 50px;
+                right: 50px;
+                color: #ff00ff;
+            }
+        }
+        #video-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #video-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+           #changing-text{
+            font-size: 20px;
+        }
+        #Voeu {
+            font-size: 13px;
+            color: #fff;
+            position: relative;
+          padding: 0px 20px 0px 20px
+        }
+
+        #Voeu span {
+            width: 90%;
+            height: 25%;
+        }
+     
+        #changing-text {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        #spinner {
+            display: inline-block;
+            animation: spin 7s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+.tournoyant {
+    position: absolute; 
+    margin-top: 15px;
+    background-color: rgb(65, 2, 61);
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    line-height: 85px;
+    border: 5px solid rgb(255, 0, 0);
+    border-top: 5px solid rgb(3, 0, 5);
+    animation: tourne 7s linear infinite;
+    top: 40px;
+}
+        @keyframes tourne {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video-background" autoplay >
+            <source src="test.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="content">
+        <p id="changing-text">
+            <span id="spinner">KPD</span> Vous Souhaite Une Bonne Année!
+        </p>
+
+        <h1>Meilleurs Voeux pour l'Année 2024 !</h1>
+    </div>
+
+    <div id="Voeu">
+        <span>En cette nouvelle année, que chaque instant soit tissé de succès, de bonheur et d'accomplissements. 
+            Que 2024 soit une année où vos rêves prennent leur envol, portés par l'amour, la santé et la sérénité.
+            Que chaque journée vous réserve des moments précieux et que cette année soit le chapitre le plus vibrant 
+            de votre vie. Que la lumière de l'espoir brille toujours dans ton regard, éclairant le chemin vers un avenir radieux.
+            Que cette année soit le prélude d'une symphonie extraordinaire, où chaque 
+            note résonne avec bonheur et harmonie. HEUREUSE ANNEE À VOUS !</span>
+    </div>
+
+    <div class="bonne-annee">Bonne Année !!!</div>
+    <div class="bonne">Bonne Année !!!</div>
+    <div class="bonneannee">Bonne Année !!!</div>
+    <div class="bonn">Bonne Année !!!</div>
+
+    <div class="tournoyant">KPD</div>
+  <footer>
+    <p>KOUYAHBE PAYIMI DEUBE</p>
+    <p>KOPADE HIGH-TECH</p>
+  </footer>
+    <script>
+        const changingText = document.getElementById('changing-text');
+        setInterval(() => {
+            const colors = ['#ff0000', '#800080', '#ffff00', '#00ff00', '#ff4500', '#0000ff'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            changingText.style.color = randomColor;
+        }, 300);
+    </script>
+</body>
+</html>
